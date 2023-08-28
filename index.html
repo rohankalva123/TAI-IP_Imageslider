@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+    <title>Image Slider</title>
+</head>
+<body>
+<div class="slider-container">
+ 
+    <div class="slides fade">
+        <div class="slider-numbers">1/4</div>
+        <div class="slider-image"><img src="https://i.ibb.co/wNvzM0k/53140110344-1c2b0569e0.jpg" alt="53140110344-1c2b0569e0" ></div>
+        <div class="slider-caption">Image 1</div>
+    </div> 
+ 
+    <div class="slides fade">
+        <div class="slider-numbers">2/4</div>
+        <div class="slider-image"><img src="https://i.ibb.co/KxR9RrW/2.jpg" alt="background_2"></div>
+        <div class="slider-caption">Image 2</div>
+    </div> 
+ 
+    <div class="slides fade">
+        <div class="slider-numbers">3/4</div>
+        <div class="slider-image"><img src="https://i.ibb.co/60bNTM2/3.jpg" alt="background_3"></div>
+        <div class="slider-caption">Image 3</div>
+    </div> 
+ 
+    <div class="slides fade">
+        <div class="slider-numbers">4/4</div>
+        <div class="slider-image"><img src="https://i.ibb.co/VSyRNV4/4.jpg" alt="background_4"></div>
+        <div class="slider-caption">Image 4</div>
+    </div> 
+    <!-- Navigation Arrows -->
+    <a class="prev" onclick="plusIndex(-1)">❮</a>
+    <a class="next" onclick="plusIndex(+1)">❯</a>
+ 
+    <!-- Slider Bullets -->
+    <div class="slider-bullets" id="slider-bullets">
+        <span class="dots" onclick="currentSlide(1)"></span>
+        <span class="dots" onclick="currentSlide(2)"></span>
+        <span class="dots" onclick="currentSlide(3)"></span>
+        <span class="dots" onclick="currentSlide(4)"></span>
+    </div> 
+ 
+</div>
+<!-- Script to initialize the slider -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        showImage(slideIndex); 
+    });
+</script>
+</body>
+</html>

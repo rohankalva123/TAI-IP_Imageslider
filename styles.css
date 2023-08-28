@@ -1,0 +1,114 @@
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    font-family: Tahoma, Arial;
+    padding: 0px;
+    margin: 0px;
+}
+
+/* Body Styles */
+body {
+    background-color: rgb(55, 106, 121); 
+}
+ 
+/* Slider Container Styles */
+.slider-container {
+    width: 650px;
+    height: 80vh; /* Use 80% of viewport height for centering */
+    margin: auto;
+    position: relative;
+    background-color: rgb(135, 51, 51);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+ 
+/* Fade Animation for Slides */
+.slider-container .fade {
+    animation-name: fade;
+    animation-duration: 0.5s;
+}
+ 
+@keyframes fade {
+    from {opacity: 0.4}
+    to {opacity: 1}
+}
+ 
+/* Slide Numbers Styles */
+.slider-container .slides .slider-numbers {
+    position: absolute;
+    padding: 10px;
+    font-size: 15px;
+    color: #FFF
+}
+ 
+/* Slide Caption Styles */
+.slider-container .slides .slider-caption {
+    text-align: center;
+    font-size: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 45px; /* Adjust vertical position of caption */
+    width: 100%;
+    color: #FFF;
+    padding: 6px;
+}
+ 
+/* Previous and Next Button Styles */
+.slider-container .prev,
+.slider-container .next {
+    position: absolute;
+    top: 50%;
+    left: 0; /* Position at the extreme left */
+    transform: translateY(-50%);
+    color: #FFF;
+    font-weight: bold;
+    padding: 10px;
+    font-size: 30px;
+    text-decoration: none;
+}
+ 
+.slider-container .next {
+    left: auto; /* Reset the left positioning for the next button */
+    right: 0;
+}
+ 
+/* Button Hover Styles */
+.slider-container .prev:hover{
+    background: rgba(0, 0, 0, 0.6);
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    cursor: pointer;
+}
+.slider-container .next:hover {
+    background: rgba(0, 0, 0, 0.6);
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    cursor: pointer;
+}
+ 
+/* Slider Bullets Styles */
+.slider-container .slider-bullets {
+    text-align: center;
+}
+ 
+.slider-container .slider-bullets .dots {
+    display: inline-block;
+    padding: 5px;
+    width: 10px;
+    height: 10px;
+    background-color: #808080;
+    border-radius: 50%;
+}
+ 
+/* Bullets Hover Styles */
+.slider-container .slider-bullets .dots:hover {
+    background-color: #383838;
+    cursor: pointer;
+}
+ 
+/* Active Bullet Styles */
+.slider-container .slider-bullets .active {
+    background-color: #383838;
+}
